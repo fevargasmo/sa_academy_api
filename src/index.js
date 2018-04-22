@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 app.use(koaLogger());
 app.use(koaCors());
 
-// read token from header
+// read token from header d
 app.use(async (ctx, next) => {
 	if (ctx.header.authorization) {
 		const token = ctx.header.authorization.match(/Bearer ([A-Za-z0-9]+)/);
