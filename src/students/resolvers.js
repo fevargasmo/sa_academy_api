@@ -8,15 +8,15 @@ const resolvers = {
 		allStudents: (_) =>
 			getRequest(URL, ''),
 		studentById: (_, { id }) =>
-			generalRequest(`${URL}/${id}`, 'GET'),
+			generalRequest(`${URL}${id}`, 'GET'),
 	},
 	Mutation: {
 		createStudent: (_, { student }) =>
 			generalRequest(`${URL}`, 'POST', student),
 		updateStudent: (_, { id, student }) =>
-			generalRequest(`${URL}/${id}`, 'PUT', student),
+			generalRequest(`${URL}${id}`, 'PUT', student),
 		deleteStudent: (_, { id }) =>
-			generalRequest(`${URL}/${id}`, 'DELETE')
+			generalRequest(`${URL}${id}`, 'DELETE')
 	}
 };
 
